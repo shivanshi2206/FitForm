@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitForm AI - Side Leg Raise</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        #loading {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .loader {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto; /* Center the loader */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #message {
+            margin-top: 10px;
+            text-align: center;
+            color: green; /* Change color as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FitForm AI</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/side_leg_raise">Side Leg Raise</a></li>
+            <li><a href="/bicep_curl">Bicep Curl</a></li>
+            <li><a href="/squat">Squats</a></li>
+        </ul>
+    </nav>
+    <main class="exercise-container">
+        <h2>Plank Exercise</h2>
+        <p>Instructions:</p>
+        <ul>
+            <li>Ensure proper lighting for accurate detection.</li>
+            <li>Keep your leg straight while raising to the side.</li>
+            <li>Maintain a steady pose for better feedback.</li>
+        </ul>
+        <button onclick="startCamera('plank')">Start Camera</button>
+
+        <div id="loading">
+            <div class="loader"></div>
+            Processing... Please wait.
+        </div>
+
+        <div id="message"></div> <!-- Message area for feedback -->
+
+        <div id="camera-container" style="display:none;">
+            <video id="camera" width="640" height="480" autoplay></video>
+            <button onclick="maximizeCamera()">Maximize Camera</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us: <a href="mailto:info@fitformai.com">info@fitformai.com</a></p>
+    </footer>
+
+    <script>
+        function startCamera(exercise) {
+            // Show loading indicator
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('message').innerText = ''; // Clear previous messages
+
+            // Set a timeout for 1 minute (60000 milliseconds)
+            const timeout = setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('message').innerText = "";
+            }, 18000); // 1 minute timeout
+
+            fetch(`/start_camera/${exercise}`)
+                
+                .catch(() => {
+                    // Hide loading indicator
+                    document.getElementById('loading').style.display = 'none';
+                  
+                });
+        }
+
+        function maximizeCamera() {
+            const camera = document.getElementById('camera ');
+            camera.style.width = '100%';
+            camera.style.height = 'auto';
+        }
+    </script>
+</body>
+</html>

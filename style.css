@@ -1,0 +1,93 @@
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #454545;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #4CAF50;
+}
+h2, p {
+    font-weight: bold;  /* Makes text bold */
+    color:black;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #307e33;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #575757;
+    border-radius: 5px;
+    color: white;
+}
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 100px auto;
+}
+/* Styling for the main section of the plank page */
+.exercise-container {
+    text-align: center;
+    padding: 30px 20px; /* Adjust padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.4); /* Light background with some transparency */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    max-width: 700px; /* Change this to adjust the background width */
+    margin: 50px auto; /* Centers the section horizontally and adds top/bottom margin */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #4bb14e;
+}
+
+footer a {
+    color: #4bb14e;
+    text-decoration: none;
+}
