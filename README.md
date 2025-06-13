@@ -20,6 +20,7 @@ Make sure you have the following installed:
 - flask
 - opencv
 - mediapipe
+- numpy
 
 ## Project Structure
 
