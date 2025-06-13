@@ -59,4 +59,4 @@ FitForm/
 - Get real-time feedback on posture and repetitions.
 
 
-<a href="FitFormAI.pdf" class="image fit"><img src="images/marr_pic.jpg" alt=""></a>
+For more details regarding testing and deployment refer FitFormAI.pdf
