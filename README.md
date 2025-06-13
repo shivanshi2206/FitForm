@@ -57,5 +57,3 @@ FitForm/
 - Allow webcam access when prompted.
 - Follow the instructions and perform the exercise.
 - Get real-time feedback on posture and repetitions.
-
-Feel free to contribute or raise issues on the [GitHub repository](https://github.com/shivanshi2206/FitForm).
