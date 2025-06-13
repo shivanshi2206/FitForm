@@ -1,3 +1,5 @@
+For more details regarding testing and deployment refer FitFormAI.pdf
+
 # FitForm
 
 **FitForm** is a real-time exercise posture correction system built with Python, OpenCV, and MediaPipe. It analyzes body movements using webcam input in real time and provides instant feedback to ensure correct exercise form.
@@ -57,6 +59,3 @@ FitForm/
 - Allow webcam access when prompted.
 - Follow the instructions and perform the exercise.
 - Get real-time feedback on posture and repetitions.
-
-
-For more details regarding testing and deployment refer FitFormAI.pdf
